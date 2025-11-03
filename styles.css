@@ -1,0 +1,157 @@
+/* body{
+    background-color: rgb(155, 242, 84);
+    position: relative;
+    left: 0;
+    top: 92px;
+    left: 0;
+    right: 0;
+    padding-bottom: 15px;
+    text-align: center;
+    color: red;
+} */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.6;
+    background-color: rgb(155, 242, 84);
+    margin: 0;
+    padding-top: 110px; /* for fixed header */
+    color: #222;
+    background: linear-gradient(slateblue, orange);
+}
+h1 {
+    display: inline-block;
+    color: blue;
+    text-shadow: 2px 2px;
+    text-size-adjust: 10px;
+
+}
+
+div span{
+    column-count: 2;
+
+}
+/* header{
+    display: block;
+    background-color: rgb(98, 233, 188);
+    color: red;
+    padding: 10px;
+    margin: 0;
+    text-size-adjust: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+} */
+header {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    background-color: rgb(98, 233, 188);
+    color: #222;
+    padding: 15px 20px;
+    margin: auto;
+    text-align: center;
+    margin-top: 0%;
+    
+}
+
+/* button{
+    color: red;
+    background-color: blue;
+    background: -moz-linear-gradient(top, yellow 0%, green 100%);
+    background: -webkit-linear-gradient(top, yellow 0%, green 100%);
+    background: linear-gradient(top, yellow 0%, green 100%);
+} */
+button {
+    color: #fff;
+    background: linear-gradient(90deg, #007bff 0%, #00c853 100%);
+    border: none;
+    border-radius: 6px;
+    padding: 0.7em 2em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+body img{
+ border-image-width: 100px;
+ border: 3px solid crimson;
+ border-radius: 100px;   
+}
+body ul img{
+    border-color: 2px dashed brown;
+    border-radius: 0px 50px;
+}
+a{
+    margin: 10px;
+    padding: 3px;
+}
+.disc{
+    list-style-type: none;}
+
+footer{
+    background-color: rgb(233, 142, 82);
+    color: white;
+    margin-bottom: 0px;
+    max-width: 100%;
+}
+.colm-2{
+    column-count: 2;
+}
+.library{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    column-gap: -5px;
+}
+.green{
+    color: greenyellow;
+}
+table{
+    border: 1px solid greenyellow;
+    margin: 0 auto;
+}
+td,th,tr{
+    border: 1px solid red;
+    margin: 0 auto;
+}
+/* pseudo classes */
+a:hover{
+    color: White;
+    background-color: orange;
+    outline: none;
+    padding: 10px;
+    text-decoration: dashed;
+    margin: 5px;
+}
+ button:hover{
+    color: white;
+    background-color: blue;
+    background: -moz-linear-gradient(top, green 0%, yellow 100%);
+    background: -webkit-linear-gradient(top, green 0%, yellow 100%);
+    background: linear-gradient(top, green 0%, yellow 100%);
+} 
+button:hover {
+    background: linear-gradient(90deg/* filepath: /home/charlesk/Desktop/project html/pro1 sths/styles.css */)
+}
+form input:hover{
+    border:3px solid crimson;
+}
+form input:valid{
+    color: green;
+}
+form input:invalid{
+    color: red;
+    background-color: pink;
+}
+
+ul.disc img:hover{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 50px 0px;
+}
