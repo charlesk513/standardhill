@@ -102,7 +102,9 @@ footer{
     max-width: 100%;
 }
 .colm-2{
-    column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    column-gap: 10px;
 }
 .library{
     display: grid;
@@ -154,4 +156,5 @@ ul.disc img:hover{
     margin: 15px;
     padding: 10px;
     border-radius: 50px 0px;
+
 }
