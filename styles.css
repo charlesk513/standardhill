@@ -1,72 +1,71 @@
-/* body{
-    background-color: rgb(155, 242, 84);
-    position: relative;
-    left: 0;
-    top: 92px;
-    left: 0;
-    right: 0;
-    padding-bottom: 15px;
-    text-align: center;
-    color: red;
-} */
-
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 1.1em;
     text-align: center;
     line-height: 1.6;
-    background-color: rgb(155, 242, 84);
-    margin: 0;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 80px;
     padding-top: 110px; /* for fixed header */
-    color: #222;
-    background: linear-gradient(slateblue, orange);
+    color: #333;
 }
-h1 {
-    display: inline-block;
-    color: blue;
-    text-shadow: 2px 2px;
-    text-size-adjust: 10px;
 
+/* Header styles */
+header {
+    display: flex;
+    flex-direction: column;       /* Keep vertical layout for title and links */
+    align-items: center;
+    justify-content: center;
+    background-color: #0066cc;
+    padding: 5px 15px;            /* Reduced padding to make header smaller */
+    position: fixed;              /* Keep header fixed at top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;                /* Stay above other content */
+    margin: 0;
+}
+
+/* Title centered below navigation */
+h1 {
+    color: #fff;
+    margin-top: 0px;
+    margin-bottom: 0px;             /* Adjusted spacing for smaller header */
+    font-size: 38px;
+    text-align: center;
+}
+
+/* Navigation links */
+.nav-top {
+    position: absolute;
+    top: 8px;                     /* Slightly closer to top */
+    right: 20px;                  /* Keep to right corner */
+    display: flex;
+    gap: 12px;                    /* Slightly reduced spacing */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/* Logo */
+header img.logo {        
+    width: 75px;                  
+    height: 75px;
+    border-radius: 50%;
+    margin-right: 95%;
+    
+}
+
+.nav-top a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 div span{
     column-count: 2;
 
 }
-/* header{
-    display: block;
-    background-color: rgb(98, 233, 188);
-    color: red;
-    padding: 10px;
-    margin: 0;
-    text-size-adjust: 20px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-} */
-header {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    font-size: 1.3em;
-    letter-spacing: 1px;
-    background-color: rgb(98, 233, 188);
-    color: #222;
-    padding: 15px 20px;
-    margin: auto;
-    text-align: center;
-    margin-top: 0%;
-    
-}
 
-/* button{
-    color: red;
-    background-color: blue;
-    background: -moz-linear-gradient(top, yellow 0%, green 100%);
-    background: -webkit-linear-gradient(top, yellow 0%, green 100%);
-    background: linear-gradient(top, yellow 0%, green 100%);
-} */
 button {
     color: #fff;
     background: linear-gradient(90deg, #007bff 0%, #00c853 100%);
@@ -111,11 +110,8 @@ footer{
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     column-gap: -5px;
 }
-.green{
-    color: greenyellow;
-}
 table{
-    border: 1px solid greenyellow;
+    border: 1px solid rgb(20, 20, 19);
     margin: 0 auto;
 }
 td,th,tr{
@@ -124,8 +120,7 @@ td,th,tr{
 }
 /* pseudo classes */
 a:hover{
-    color: White;
-    background-color: orange;
+    color: rgb(252, 53, 53);
     outline: none;
     padding: 10px;
     text-decoration: dashed;
@@ -156,5 +151,81 @@ ul.disc img:hover{
     margin: 15px;
     padding: 10px;
     border-radius: 50px 0px;
-
 }
+
+.nav-top a:hover {
+    color: #ffcc00;
+}
+
+/* Page content */
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.welcome {
+    font-size: 28px;
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.about {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Animation (Bouncing Icon) */
+.interactive-animation {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    animation: bounce 2s infinite;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-25px); }
+}
+
+.pass-rate {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    padding: 12px;                     /* Reduced from 25px → 12px */
+    border-radius: 8px;                /* Slightly smaller corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Softer shadow */
+    display: inline-block;
+    min-width: 220px;                  /* Reduced minimum width */
+}
+
+footer {
+    background-color: rgba(0, 102, 204, 0.7); /* Slightly transparent blue */
+    color: #fff;
+    padding: 8px 15px;        /* Compact height */
+    text-align: center;
+    font-size: 0.9em;         /* Slightly smaller text */
+    width: 100%;              /* Stretch across entire page */
+    margin: 0;                /* Remove side margins */
+    margin-top: 40px;         /* Small gap above footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Soft separation line */
+    box-sizing: border-box;   /* Ensures full width includes padding */
+}
+
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
