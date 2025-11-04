@@ -1,57 +1,72 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"><meta name="description" content="Standard Hill S.S. Kalungu - A leading secondary school in Kalungu district, along Masaka road. Admissions, academics, sports, and events.">
-        <meta name="keywords" content="Standard Hill School Kalungu, Kalungu secondary school, Masaka schools, Uganda, academics, sports">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>HOMEPAGE</title>
-        <meta name="google-site-verification" content="mir3Mo9Qz3Y1LcmWRcVoCpnm5jGgLFBWuW94udvp6Oo" />
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <img src="image/budge.jpg" alt="logo" width="40px" height="40px">
-            <h1><b>STANDARD HILL S.S-KALUNGU</b></h1><br>
-            <a href="homepage.html">HOME PAGE</a>
-            <a href="Academics.html">ACADEMICS</a>
-            <a href="Sports.html">SPORTS</a>
-            <a href="register.html">REGISTER</a>
-            <a href="about.html">ABOUT</a>
-        </header>
-        <div class="body">
-        <img src="image/budge.jpg" width="220px" height="220px">
-        <br>
-       
-        <p><b><h2>OUR UTMOST IS EXELLENCE</h2></b></p>
-            <form>
-                <label for="Name">Your Name:</label>
-                <input type="text" id="Name" required>
-                <br><br>
-                <label for="email">email address:</label>
-                <input type="email" id="email" name="email" required>
-                <br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <span>Forgot password?</span>
-                <br><br>
-                <a href="Academics.html">LOGIN</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Welcome to Standard Hill S.S Kalungu, a school committed to excellence in education located in Kalungu district.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Hill S.S Kalungu - Homepage</title>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-                <br><br>
+<body>
+    <header>
+        <img src="image/budge.jpg" alt="School Logo" class="logo">
 
-        <footer class="footer">
-            <a href="standardhill2019@gmail.com" rel="email">Email: standardhill2019@gmail.com</a>
-            <br><br>
-            <span>Contact Us on 0754899420 / 0752536765 / 0700482629 / 0700300408<br>Find us in Kalungu district, along Masaka road opposite Dr.Moses clinic<br>P.O Box 26, Masaka</span>
-            <br>
-            <a href="mailto:kcjesuschrist513@gmail.com" rel="email">Send an email:</a>
-            <p>&copy; 2025 Standard Hill S.S Kalungu.<br> All rights reserved</p>
-        </footer>
-
+        <div class="nav-top">
+            <a href="homepage.html"><i class="fas fa-home"></i> Home</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="Academics.html"><i class="fas fa-book"></i> Academics</a>
+            <a href="Sports.html"><i class="fas fa-futbol"></i> Sports</a>
+            <a href="register.html"><i class="fas fa-user-plus"></i> Register</a><br>
         </div>
-            </form>
-                <script src="sths.js"></script>
-    </body>
+
+        <h1><b>STANDARD HILL S.S - KALUNGU</b></h1>
+    </header>
+
+    <div class="content">
+        <img src="image/budge.jpg" width="180px" height="180px" alt="School Emblem">
+        <h2 class="welcome">OUR UTMOST IS EXCELLENCE</h2>
+
+        <p class="about">
+            Standard Hill S.S Kalungu is a leading secondary school dedicated to nurturing academic and moral excellence. 
+            Located in the heart of Kalungu district, we aim to provide holistic education that empowers learners to excel 
+            in academics, sports, and leadership. Our vision is to produce responsible citizens who transform communities.
+        </p>
+
+        <!-- Live Animation (Mascot) -->
+        <div class="interactive-animation">
+            🎓
+        </div>
+
+        <!-- Pass Rate Chart -->
+        <div class="pass-rate">
+            <h3>Students’ Performance Over the Years</h3>
+            <canvas id="performanceChart"></canvas>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>
+            <i class="fas fa-envelope"></i> 
+            <a href="mailto:standardhill2019@gmail.com">standardhill2019@gmail.com</a>
+        </p>
+        <p>
+            <i class="fas fa-phone"></i> 
+            0754899420 / 0752536765 / 0700482629 / 0700300408
+        </p>
+        <p>
+            <i class="fas fa-map-marker-alt"></i>
+            Kalungu District, along Masaka road, opposite Dr. Moses Clinic<br>
+            P.O Box 26, Masaka
+        </p>
+        <p>&copy; 2025 Standard Hill S.S Kalungu. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- External JS -->
+    <script src="sths.js"></script>
+</body>
 </html>
-
-
