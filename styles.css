@@ -228,12 +228,13 @@ footer {
 .footer a:hover {
     text-decoration: underline;
 }
-.mottos{
+.mottos span{
     text-align: left;
 }
 .motto{
     margin-left: 75px;
 }
+
 
 
 
