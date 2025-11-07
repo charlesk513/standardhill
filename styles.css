@@ -109,6 +109,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     column-gap: -5px;
+    line-height: 15px 
 }
 table{
     border: 1px solid rgb(20, 20, 19);
@@ -234,6 +235,7 @@ footer {
 .motto{
     margin-left: 75px;
 }
+
 
 
 
