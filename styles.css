@@ -92,7 +92,15 @@ a{
     padding: 3px;
 }
 .disc{
-    list-style-type: none;}
+    list-style-type: none;
+    width: 30%;
+    height: auto;
+}
+@media screen and(max-width: 768px) {
+    .image-container span{
+        width: 100%;
+    }
+}
 
 footer{
     background-color: rgb(233, 142, 82);
@@ -100,16 +108,16 @@ footer{
     margin-bottom: 0px;
     max-width: 100%;
 }
-.colm-2{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    column-gap: 10px;
+.image-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 .library{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     column-gap: -5px;
-    line-height: 15px 
 }
 table{
     border: 1px solid rgb(20, 20, 19);
@@ -176,6 +184,8 @@ ul.disc img:hover{
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 30px;
+    text-align: left;
+    margin-left: 50px;
 }
 
 /* Animation (Bouncing Icon) */
@@ -205,17 +215,20 @@ ul.disc img:hover{
     box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Softer shadow */
     display: inline-block;
     min-width: 220px;                  /* Reduced minimum width */
+    
 }
 
 footer {
-    background-color: rgba(0, 102, 204, 0.7); /* Slightly transparent blue */
+    background-color: rgba(34, 19, 243, 0.952); /* Slightly transparent blue */
     color: #fff;
     padding: 8px 15px;        /* Compact height */
     text-align: center;
     font-size: 0.9em;         /* Slightly smaller text */
     width: 100%;              /* Stretch across entire page */
     margin: 0;                /* Remove side margins */
-    margin-top: 40px;         /* Small gap above footer */
+    left: 0px;
+
+    margin-top: 0px;         /* Small gap above footer */
     border-top: 1px solid rgba(255, 255, 255, 0.3); /* Soft separation line */
     box-sizing: border-box;   /* Ensures full width includes padding */
 }
@@ -228,15 +241,18 @@ footer {
 
 .footer a:hover {
     text-decoration: underline;
+    color: #ffcc00;
 }
-.mottos span{
+.sports{
+    color: #004080;
+}
+.goal{
     text-align: left;
 }
-.motto{
+.goal p{
     margin-left: 75px;
 }
-
-
-
-
-
+.goals{
+    color: blue;
+    text-decoration-thickness: bold;
+}

@@ -6,7 +6,7 @@ const performanceChart = new Chart(ctx, {
         labels: ['2019', '2020', '2022', '2023', '2024'],
         datasets: [{
             label: 'Performance Rate (%)',
-            data: [85, 89, 94, 98, 98],
+            data: [90, 92, 96, 97, 99],
             borderColor: '#004080',
             backgroundColor: 'rgba(0,102,204,0.2)',
             borderWidth: 2,
@@ -22,7 +22,7 @@ const performanceChart = new Chart(ctx, {
                 title: { display: true, text: 'Pass Rate (%)' }
             },
             x: {
-                title: { display: true, text: 'Year' }
+                title: { display: true, text: 'Study Year' }
             }
         },
         plugins: {
