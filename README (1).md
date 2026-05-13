@@ -56,6 +56,27 @@ standardhill/
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - No server required for local viewing
 
+### Local Development
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/charlesk513/standardhill.git
+   cd standardhill
+   ```
+
+2. **Open in browser:**
+   - Simply open `index.html` in your web browser
+   - Or use a local server (recommended):
+     ```bash
+     # Using Python
+     python -m http.server 8000
+     
+     # Using Node.js (http-server)
+     npx http-server
+     ```
+
+3. **View the website:**
+   - Navigate to `http://localhost:8000` (or appropriate port)
 
 ## Features
 
@@ -86,7 +107,7 @@ P.O Box 26, Masaka, Uganda
 ## GitHub Pages
 
 This website is also hosted on GitHub Pages:
-- Visit: [Standard Hill School Website](https://charlesk513.github.io/standardhill/index.html)
+- Visit: [Standard Hill School Website](https://charlesk513.github.io/standardhill/)
 
 ## Future Enhancements
 
@@ -104,9 +125,11 @@ Planned improvements for the website:
 
 If you'd like to contribute to this project:
 
-1. [Kindly send an email after clicking here](kabungacharles001@gmail.com)
-
-
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
