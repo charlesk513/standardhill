@@ -104,7 +104,7 @@ Planned improvements for the website:
 
 If you'd like to contribute to this project:
 
-1. [Kindly send an email after clicking here](kabungacharles001@gmail.com)
+1. Contact me: [kabungacharles001@gmail.com](mailto:kabungacharles001@gmail.com)
 
 
 
@@ -119,9 +119,8 @@ Created by [Kabunga Charles](https://github.com/charlesk513)
 ## Support
 
 For issues, questions, or suggestions, please contact:
-- Email: standardhill2019@gmail.com
-- Open an [issue](https://github.com/charlesk513/standardhill/issues) on GitHub
+- Email: kabungacharles001@gmail.com
 
 ---
 
-**© 2025 Standard Hill S.S Kalungu. All Rights Reserved.**
+**© 2026 Standard Hill S.S Kalungu. All Rights Reserved.**
