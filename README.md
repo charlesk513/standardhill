@@ -1,6 +1,6 @@
 # Standard Hill Secondary School - Kalungu (STHS)
 
-![Standard Hill Logo](img/budge.jpg)
+![Standard Hill calendar](img/calendar.jpeg)
 
 > **Our Utmost is Excellence** 🎓
 
