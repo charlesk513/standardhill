@@ -104,7 +104,7 @@ Planned improvements for the website:
 
 If you'd like to contribute to this project:
 
-1. Contact me: [kabungacharles001@gmail.com](mailto:kabungacharles001@gmail.com)
+1. Contact me: [Email me](https://mail.google.com/mail/?view=cm&fs=1&to=yourname@gmail.com&su=Hello%20Charles&body=Hi%20Charles%2C%20I%20visited%20your%20portfolio...)
 
 
 
