@@ -80,13 +80,13 @@ standardhill/
 - 0700300408
 
 📍 **Location:**
-Kalungu District, along Masaka road, opposite Dr. Moses Clinic
+Kalungu District, along Masaka road, opposite Dr. Moses' Clinic
 P.O Box 26, Masaka, Uganda
 
 ## GitHub Pages
 
-This website is also hosted on GitHub Pages:
-- Visit: [Standard Hill School Website](https://charlesk513.github.io/standardhill/index.html)
+This website is also hosted online using Netlify:
+- Visit: [Standard Hill School Website](https/standardhill.netlify.app)
 
 ## Future Enhancements
 
@@ -104,7 +104,7 @@ Planned improvements for the website:
 
 If you'd like to contribute to this project:
 
-1. Contact me: [Email me](https://mail.google.com/mail/?view=cm&fs=1&to=yourname@gmail.com&su=Hello%20Charles&body=Hi%20Charles%2C%20I%20visited%20your%20portfolio...)
+1. Contact me: [Email me](https://mail.google.com/mail/?view=cm&fs=1&to=kabungacharles001@gmail.com&su=Hello%20Charles&body=Hi%20Charles%2C%20I%20visited%20your%20portfolio...)
 
 
 
