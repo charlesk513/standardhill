@@ -71,7 +71,7 @@ standardhill/
 
 ## Contact Information
 
-📧 **Email:** [Email us:](mailto:kabungacharles001@gmail.com)
+📧 **Email:** [![Gmail](https://img.shields.io/badge/Gmail-Contact-red?style=for-the-badge&logo=gmail)](mailto:kabungacharles001@gmail.com)
 
 📞 **Phone Numbers:**
 - 0754899420
