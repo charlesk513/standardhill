@@ -117,4 +117,3 @@ For issues, questions, or suggestions, please contact:
 ---
 
 **© 2026 Standard Hill S.S Kalungu. All Rights Reserved.**
-https://www.youtube.com/watch?v=r-uOLxNrNk8
