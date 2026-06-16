@@ -1,53 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery – Standard Hill School | Photos of School Life, Kalungu Uganda</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Photo gallery of Standard Hill School – school buildings, students, sports events, graduation, labs, library and school activities in Kalungu District, Uganda." />
-  <meta name="keywords"
-    content="Standard Hill School gallery, school photos Uganda, Kalungu school photos, Uganda secondary school gallery, school campus pictures" />
+  <title>Gallery – Standard Hill School | Kalungu District, Uganda</title>
+  <meta name="description" content="Photo gallery of Standard Hill School – student activities, sports, events, facilities and school life in Kalungu District, Uganda." />
+  <meta name="keywords" content="Standard Hill School gallery, Kalungu school photos, Uganda secondary school photos, school life Uganda" />
   <meta name="author" content="Standard Hill School" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.standardhillschool.ac.ug/gallery.html" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.standardhillschool.ac.ug/gallery.html" />
   <meta property="og:title" content="Gallery – Standard Hill School" />
-  <meta property="og:description"
-    content="A glimpse into school life at Standard Hill School, Kalungu District, Uganda." />
+  <meta property="og:description" content="Browse photos from Standard Hill School – student life, sports, events and facilities in Kalungu, Uganda." />
   <meta property="og:image" content="https://www.standardhillschool.ac.ug/images/og-image.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gallery – Standard Hill School" />
   <meta name="twitter:description" content="Photos from Standard Hill School, Kalungu District, Uganda." />
-
-  <!-- Geo -->
   <meta name="geo.region" content="UG-C" />
   <meta name="geo.placename" content="Kalungu District, Uganda" />
   <meta name="language" content="English" />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .gallery-item {
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--sky);
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item img {
+      width: 100%; height: 200px;
+      object-fit: cover; display: block;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item.tall img { height: 412px; }
+    .gallery-item.wide { grid-column: span 2; }
+    .gallery-item.wide img { height: 200px; width: 100%; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-item .overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,26,58,0);
+      display: flex; align-items: flex-end;
+      padding: 14px;
+      transition: background 0.3s ease;
+    }
+    .gallery-item:hover .overlay { background: rgba(10,26,58,0.45); }
+    .gallery-item .caption {
+      color: var(--white); font-size: 0.8rem; font-weight: 500;
+      opacity: 0; transform: translateY(8px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .gallery-item:hover .caption { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item.tall img { height: 250px; }
+      .gallery-item.wide { grid-column: span 1; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item.tall { grid-row: span 1; }
+      .gallery-item img, .gallery-item.tall img { height: 220px; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- Uganda Flag Banner -->
   <div class="ug-banner">
     <span class="b1"></span><span class="b2"></span><span class="b3"></span>
     <span class="b4"></span><span class="b5"></span><span class="b6"></span>
   </div>
 
-  <!-- Top Bar -->
   <div class="top-bar">
     <div>📍 Kalungu District, Central Uganda &nbsp;|&nbsp; 🇺🇬 Uganda Certificate/Advanced Education</div>
     <div class="top-bar-right">
@@ -57,12 +88,10 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
   <header>
     <div class="header-inner">
       <div class="logo-area">
-        <div><img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
-        </div>
+        <img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
         <div class="logo-text">
           <h1>Standard Hill School</h1>
           <p>Our Utmost is Excellence</p>
@@ -78,70 +107,98 @@
         <a href="gallery.html" class="active">Gallery</a>
         <a href="contact.html" class="nav-cta">Admissions</a>
       </nav>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
+
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="close-btn" id="closeNav" role="button" aria-label="Close menu" tabindex="0">✕</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="staff.html">Staff</a>
+    <a href="student-life.html">Student Life</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" style="color:var(--gold-light);">Admissions →</a>
+  </div>
 
   <!-- Gallery Section -->
   <section class="gallery-section" style="padding-top:80px;">
     <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Gallery</div>
-      <h2 class="sec-title">School Photo Gallery</h2>
-      <p class="sec-lead">A glimpse into life at Standard Hill School. Upload your own school images to fill the
-        gallery.</p>
-      <div class="gallery-grid">
+      <div class="reveal">
+        <div class="divider"></div>
+        <div class="sec-label">Gallery</div>
+        <h2 class="sec-title">Life in Pictures</h2>
+        <p class="sec-lead">A glimpse into the vibrant life at Standard Hill School — from academics to sports, events and everyday moments that make our community special.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
         <div class="gallery-item tall">
-          <img src="img/calendar.jpeg" alt="Standard Hill School Main Building"
-            style="width:100%;height:372px;object-fit:cover;border-radius:10px;">
-        </div>
-        <div class="gallery-item">
-          <img src="img/assembly.jpeg" alt="Graduation Ceremony Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
-        </div>
-        <div class="gallery-item">
-          <img src="img/mr-david.jpeg" alt="Sports Day Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/school-building.jpg" alt="Standard Hill School Building" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">School Building</div></div>
         </div>
         <div class="gallery-item wide">
-          <img src="img/mr-denis.jpeg" alt="Standard Hill School Grounds"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/assembly.jpeg" alt="Morning Assembly" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Morning Assembly</div></div>
         </div>
         <div class="gallery-item">
-          <img src="img/sciencelab.img" alt="Science Laboratory Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/football.jpeg" alt="Football Team" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Football</div></div>
         </div>
         <div class="gallery-item">
-          <img src="img/volleyball.img" alt="Library Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/trophies.jpg" alt="School Trophies" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Our Trophies</div></div>
         </div>
         <div class="gallery-item">
-          <img src="img/mr-david2.jpeg" alt="Music Dance Drama Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/enjoying.jpg" alt="Students Enjoying" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Student Life</div></div>
         </div>
         <div class="gallery-item">
-          <img src="img/mr-hassan.jpeg" alt="School Garden Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/tour.jpg" alt="Field Trip" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Environmental Fieldwork</div></div>
         </div>
         <div class="gallery-item wide">
-          <img src="img/trophies.jpg" alt="Drama and Arts Standard Hill School"
-            style="width:100%;height:180px;object-fit:cover;border-radius:10px;">
+          <img src="img/teaching.jpg" alt="Classroom Teaching" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">In the Classroom</div></div>
         </div>
+        <div class="gallery-item">
+          <img src="img/mr-hassan.jpeg" alt="Head Teacher" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Leadership</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/mr_umar.jpg" alt="Teaching Staff" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Our Staff</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/calendar.jpeg" alt="School Events" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">School Events</div></div>
+        </div>
+        <div class="gallery-item">
+          <img src="img/mr-denis.jpeg" alt="School Administration" onerror="this.style.display='none'">
+          <div class="overlay"><div class="caption">Administration</div></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="reveal" style="text-align:center;margin-top:60px;padding:48px;background:var(--sky);border-radius:20px;">
+        <div class="sec-label" style="justify-content:center;">Share Your Story</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:12px;">Be Part of Our Gallery</h3>
+        <p style="color:var(--muted);font-size:0.9rem;max-width:480px;margin:0 auto 28px;">Are you a student, parent, or alumnus with photos to share? Reach out to us and help grow our school's visual story.</p>
+        <a href="contact.html" class="btn-cta" style="display:inline-block;">Contact Us →</a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="ug-banner" style="margin-bottom:40px;">
-      <span class="b1"></span><span class="b2"></span><span class="b3"></span>
-      <span class="b4"></span><span class="b5"></span><span class="b6"></span>
-    </div>
+    <div class="ug-banner"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span><span class="b5"></span><span class="b6"></span></div>
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Standard Hill School</h3>
         <div class="motto">"Our Utmost is Excellence"</div>
-        <p>A distinguished secondary school in Kalungu District, Uganda, offering both Arts and Sciences at O-Level and
-          A-Level, committed to holistic excellence.</p>
+        <p>A distinguished secondary school in Kalungu District, Uganda, offering both Arts and Sciences at O-Level and A-Level, committed to holistic excellence.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -168,7 +225,7 @@
         <ul>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="contact.html">Admissions</a></li>
-          <li><a href="news.html">News & Events</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="#">Download Forms</a></li>
         </ul>
@@ -177,21 +234,16 @@
     <div class="footer-bottom">
       <span>© 2025 Standard Hill School, Kalungu District, Uganda. All Rights Reserved.</span>
       <div class="socials">
-        <a href="#" class="social-btn" aria-label="Standard Hill School on Facebook" title="Facebook" target="_blank"
-          rel="noopener">f</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on WhatsApp" title="WhatsApp" target="_blank"
-          rel="noopener">W</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on X (Twitter)" title="X / Twitter"
-          target="_blank" rel="noopener">𝕏</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on LinkedIn" title="LinkedIn" target="_blank"
-          rel="noopener">in</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on YouTube" title="YouTube" target="_blank"
-          rel="noopener">▶</a>
+        <a href="#" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="#" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">W</a>
+        <a href="#" class="social-btn" aria-label="X / Twitter" title="X / Twitter" target="_blank" rel="noopener">𝕏</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="#" class="social-btn" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶</a>
       </div>
     </div>
   </footer>
 
+  <div class="scroll-top" id="scrollTop" role="button" aria-label="Scroll to top" tabindex="0">↑</div>
   <script src="js/main.js"></script>
 </body>
-
 </html>

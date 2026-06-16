@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Staff – Standard Hill School | Kalungu District, Uganda</title>
-
-  <!-- SEO Meta Tags -->
   <meta name="description"
     content="Meet the dedicated and qualified teaching and administrative staff at Standard Hill School, Kalungu District, Uganda. Committed to excellence in education." />
   <meta name="keywords"
@@ -14,41 +12,34 @@
   <meta name="author" content="Standard Hill School" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.standardhillschool.ac.ug/staff.html" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.standardhillschool.ac.ug/staff.html" />
   <meta property="og:title" content="Our Staff – Standard Hill School" />
   <meta property="og:description"
     content="Qualified and dedicated educators committed to guiding every student to excellence at Standard Hill School, Kalungu, Uganda." />
   <meta property="og:image" content="https://www.standardhillschool.ac.ug/images/og-image.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Our Staff – Standard Hill School" />
   <meta name="twitter:description"
     content="Meet our qualified educators at Standard Hill School, Kalungu District, Uganda." />
-
-  <!-- Geo -->
   <meta name="geo.region" content="UG-C" />
   <meta name="geo.placename" content="Kalungu District, Uganda" />
   <meta name="language" content="English" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- Uganda Flag Banner -->
   <div class="ug-banner">
     <span class="b1"></span><span class="b2"></span><span class="b3"></span>
     <span class="b4"></span><span class="b5"></span><span class="b6"></span>
   </div>
 
-  <!-- Top Bar -->
   <div class="top-bar">
     <div>📍 Kalungu District, Central Uganda &nbsp;|&nbsp; 🇺🇬 Uganda Certificate/Advanced Education</div>
     <div class="top-bar-right">
@@ -58,12 +49,10 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
   <header>
     <div class="header-inner">
       <div class="logo-area">
-        <div><img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
-        </div>
+        <img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
         <div class="logo-text">
           <h1>Standard Hill School</h1>
           <p>Our Utmost is Excellence</p>
@@ -79,25 +68,41 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="nav-cta">Admissions</a>
       </nav>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
+
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="close-btn" id="closeNav" role="button" aria-label="Close menu" tabindex="0">✕</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="staff.html">Staff</a>
+    <a href="student-life.html">Student Life</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" style="color:var(--gold-light);">Admissions →</a>
+  </div>
 
   <!-- Staff Section -->
   <section class="staff-section" style="padding-top:80px;">
     <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Our People</div>
-      <h2 class="sec-title">Meet Our Staff</h2>
-      <p class="sec-lead">Our team of qualified and dedicated educators brings passion, expertise, and commitment to
-        every classroom, supporting each student's journey to excellence.</p>
+      <div class="reveal">
+        <div class="divider"></div>
+        <div class="sec-label">Our People</div>
+        <h2 class="sec-title">Meet Our Staff</h2>
+        <p class="sec-lead">Our team of qualified and dedicated educators brings passion, expertise, and commitment to
+          every classroom, supporting each student's journey to excellence.</p>
+      </div>
 
       <div
-        style="margin-bottom:14px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700;">
-        Administration</div>
-      <div class="staff-grid" style="margin-bottom:48px;">
+        style="margin-bottom:14px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700;"
+        class="reveal">Administration</div>
+      <div class="staff-grid reveal" style="margin-bottom:48px;">
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/mr-hassan.jpeg" alt="Head Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/mr-hassan.jpeg" alt="Head Teacher - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Mugarura Hassan</h4>
             <div class="role">Head Teacher</div>
@@ -105,18 +110,16 @@
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/mr-denis.jpeg" alt="Director - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/mr-denis.jpeg" alt="Director - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Mugumya Denis</h4>
-            <div class="role">Director – Student wellbeing</div>
+            <div class="role">Director – Student Wellbeing</div>
             <div class="dept">B.Ed – Academic and Student Affairs</div>
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/sths-budge.png"
-              alt="Deputy Head Teacher Discipline - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/sths-budge.png" alt="Deputy Head Teacher - Standard Hill School">
+          </div>
           <div class="staff-info">
             <h4>Mr. Tusiime Alex</h4>
             <div class="role">Deputy Head Teacher – Discipline</div>
@@ -124,8 +127,7 @@
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/mr-david2.jpeg" alt="School Bursar - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/mr-david2.jpeg" alt="School Bursar - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Ssebayigga David</h4>
             <div class="role">School Bursar</div>
@@ -135,12 +137,11 @@
       </div>
 
       <div
-        style="margin-bottom:14px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700;">
-        Teaching Staff – Sciences</div>
-      <div class="staff-grid" style="margin-bottom:48px;">
+        style="margin-bottom:14px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700;"
+        class="reveal">Teaching Staff – Sciences</div>
+      <div class="staff-grid reveal" style="margin-bottom:48px;">
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/sths-budge.png" alt="Head of Sciences - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/sths-budge.png" alt="Head of Sciences - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Ndahirwe Gerald</h4>
             <div class="role">Head of Sciences</div>
@@ -148,17 +149,15 @@
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/mr_umar.jpg" alt="Biology Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/mr-hassan.jpeg" alt="Biology Teacher - Standard Hill School"></div>
           <div class="staff-info">
-            <h4>Mr. Mutesa Umar</h4>
+            <h4>Mr. Mugarura Hassan</h4>
             <div class="role">Biology Teacher</div>
-            <div class="dept">B.Sc.Ed – Biology / Chemistry</div>
+            <div class="dept">M.Ed, B.Ed – Biology / Chemistry</div>
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="Chemistry Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="Chemistry Teacher - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Lukwago Adrian</h4>
             <div class="role">Chemistry Teacher</div>
@@ -166,9 +165,8 @@
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/assembly.jpeg" alt="Computer Studies Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;">
-          </div>
+          <div class="staff-photo-ph"><img src="img/assembly.jpeg"
+              alt="Computer Studies Teacher - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Kamoga Gerald</h4>
             <div class="role">Computer Studies</div>
@@ -178,12 +176,11 @@
       </div>
 
       <div
-        style="margin-bottom:14px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700;">
-        Teaching Staff – Arts</div>
-      <div class="staff-grid">
+        style="margin-bottom:14px;font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--navy);font-weight:700;"
+        class="reveal">Teaching Staff – Arts</div>
+      <div class="staff-grid reveal">
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="Head of Arts - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="Head of Arts - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Kamoga Gerald</h4>
             <div class="role">Head of Arts</div>
@@ -191,17 +188,15 @@
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="English Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="English Teacher - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Bwire Edward</h4>
-            <div class="role">English & Literature</div>
+            <div class="role">English &amp; Literature</div>
             <div class="dept">B.A.Ed – English Language</div>
           </div>
         </div>
         <div class="staff-card">
-          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="Economics Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+          <div class="staff-photo-ph"><img src="img/calendar.jpeg" alt="Economics Teacher - Standard Hill School"></div>
           <div class="staff-info">
             <h4>Mr. Jemba Baker</h4>
             <div class="role">Economics Teacher</div>
@@ -210,10 +205,9 @@
         </div>
         <div class="staff-card">
           <div class="staff-photo-ph"><img src="img/sths-budge.png"
-              alt="Religious Education Teacher - Standard Hill School"
-              style="width:100%;height:200px;object-fit:cover;"></div>
+              alt="Religious Education Teacher - Standard Hill School"></div>
           <div class="staff-info">
-            <h4>Ms. Natumanya Jsephine</h4>
+            <h4>Ms. Natumanya Josephine</h4>
             <div class="role">Religious Education</div>
             <div class="dept">B.A.Ed – Religious Studies</div>
           </div>
@@ -222,12 +216,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="ug-banner" style="margin-bottom:40px;">
-      <span class="b1"></span><span class="b2"></span><span class="b3"></span>
-      <span class="b4"></span><span class="b5"></span><span class="b6"></span>
-    </div>
+    <div class="ug-banner"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span
+        class="b4"></span><span class="b5"></span><span class="b6"></span></div>
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Standard Hill School</h3>
@@ -260,7 +251,7 @@
         <ul>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="contact.html">Admissions</a></li>
-          <li><a href="news.html">News & Events</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="#">Download Forms</a></li>
         </ul>
@@ -269,20 +260,17 @@
     <div class="footer-bottom">
       <span>© 2025 Standard Hill School, Kalungu District, Uganda. All Rights Reserved.</span>
       <div class="socials">
-        <a href="#" class="social-btn" aria-label="Standard Hill School on Facebook" title="Facebook" target="_blank"
-          rel="noopener">f</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on WhatsApp" title="WhatsApp" target="_blank"
-          rel="noopener">W</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on X (Twitter)" title="X / Twitter"
-          target="_blank" rel="noopener">𝕏</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on LinkedIn" title="LinkedIn" target="_blank"
-          rel="noopener">in</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on YouTube" title="YouTube" target="_blank"
-          rel="noopener">▶</a>
+        <a href="#" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="#" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">W</a>
+        <a href="#" class="social-btn" aria-label="X / Twitter" title="X / Twitter" target="_blank"
+          rel="noopener">𝕏</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="#" class="social-btn" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶</a>
       </div>
     </div>
   </footer>
 
+  <div class="scroll-top" id="scrollTop" role="button" aria-label="Scroll to top" tabindex="0">↑</div>
   <script src="js/main.js"></script>
 </body>
 

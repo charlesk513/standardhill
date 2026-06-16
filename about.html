@@ -5,8 +5,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us – Standard Hill School | Kalungu District, Uganda</title>
-
-  <!-- SEO Meta Tags -->
   <meta name="description"
     content="Learn about Standard Hill School – our history, mission, vision, values and leadership. A reputable secondary school in Kalungu District, Central Uganda." />
   <meta name="keywords"
@@ -14,41 +12,34 @@
   <meta name="author" content="Standard Hill School" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.standardhillschool.ac.ug/about.html" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.standardhillschool.ac.ug/about.html" />
   <meta property="og:title" content="About Standard Hill School – Our Story, Mission & Vision" />
   <meta property="og:description"
     content="A reputable secondary school in Kalungu District committed to excellence through holistic education in Arts and Sciences." />
   <meta property="og:image" content="https://www.standardhillschool.ac.ug/images/og-image.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Standard Hill School" />
   <meta name="twitter:description"
     content="Our story, mission, vision, values and school leadership – Standard Hill School, Kalungu, Uganda." />
-
-  <!-- Geo -->
   <meta name="geo.region" content="UG-C" />
   <meta name="geo.placename" content="Kalungu District, Uganda" />
   <meta name="language" content="English" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- Uganda Flag Banner -->
   <div class="ug-banner">
     <span class="b1"></span><span class="b2"></span><span class="b3"></span>
     <span class="b4"></span><span class="b5"></span><span class="b6"></span>
   </div>
 
-  <!-- Top Bar -->
   <div class="top-bar">
     <div>📍 Kalungu District, Central Uganda &nbsp;|&nbsp; 🇺🇬 Uganda Certificate/Advanced Education</div>
     <div class="top-bar-right">
@@ -58,12 +49,10 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
   <header>
     <div class="header-inner">
       <div class="logo-area">
-        <div><img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
-        </div>
+        <img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
         <div class="logo-text">
           <h1>Standard Hill School</h1>
           <p>Our Utmost is Excellence</p>
@@ -79,24 +68,39 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="nav-cta">Admissions</a>
       </nav>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
+
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="close-btn" id="closeNav" role="button" aria-label="Close menu" tabindex="0">✕</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="staff.html">Staff</a>
+    <a href="student-life.html">Student Life</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" style="color:var(--gold-light);">Admissions →</a>
+  </div>
 
   <!-- About Section -->
   <section class="about-section" style="padding-top:80px;">
     <div class="sec-inner">
       <div class="about-grid">
-        <div class="about-img-wrap">
-          <div class="about-img-ph" style="border:none;background:none;padding:0;">
-            <img src="img/school-building.jpg" alt="Standard Hill School Building"
+        <div class="about-img-wrap reveal">
+          <div class="about-img-ph">
+            <img src="img/teaching.jpg" alt="Standard Hill School Students  on a geography tour"
               style="width:100%;height:420px;object-fit:cover;border-radius:16px;">
           </div>
           <div class="about-badge">
-            <div class="big">SHS</div>
+            <div class="big">STHS</div>
             <div class="sm">Kalungu District</div>
           </div>
         </div>
-        <div>
+        <div class="reveal reveal-delay-2">
           <div class="divider"></div>
           <div class="sec-label">Our Story</div>
           <h2 class="sec-title">About Standard Hill School</h2>
@@ -114,8 +118,8 @@
           </p>
           <div style="display:flex;gap:30px;flex-wrap:wrap;">
             <div style="border-left:3px solid var(--gold);padding-left:14px;">
-              <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy);">O &
-                A Level</div>
+              <div style="font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--navy);">O
+                &amp; A Level</div>
               <div style="font-size:0.78rem;color:var(--muted);margin-top:2px;">Education Programmes</div>
             </div>
             <div style="border-left:3px solid var(--blue);padding-left:14px;">
@@ -136,24 +140,26 @@
 
   <!-- Vision, Mission & Values -->
   <section style="background:var(--white);padding:80px 40px;">
-    <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Vision, Mission & Values</div>
-      <h2 class="sec-title">Our Guiding Pillars</h2>
+    <div class="sec-inner" style="padding-top:0;padding-bottom:0;">
+      <div class="reveal">
+        <div class="divider"></div>
+        <div class="sec-label">Vision, Mission &amp; Values</div>
+        <h2 class="sec-title">Our Guiding Pillars</h2>
+      </div>
       <div class="mvv-grid">
-        <div class="mvv-card vision">
+        <div class="mvv-card vision reveal reveal-delay-1">
           <div class="mvv-icon">🌟</div>
           <h3>Vision Statement</h3>
           <p>To be a leading, nationally recognized secondary school that produces well-rounded citizens who are
             academically excellent, morally upright, and ready to positively impact their communities and the world.</p>
         </div>
-        <div class="mvv-card mission">
+        <div class="mvv-card mission reveal reveal-delay-2">
           <div class="mvv-icon">🎯</div>
           <h3>Mission Statement</h3>
           <p>To provide accessible, quality holistic education within a disciplined and caring environment, equipping
             students with knowledge, skills, values, and attitudes that prepare them for life-long success.</p>
         </div>
-        <div class="mvv-card values">
+        <div class="mvv-card values reveal reveal-delay-3">
           <div class="mvv-icon">⚖️</div>
           <h3>Core Values</h3>
           <p><strong>Excellence</strong> · <strong>Integrity</strong> · <strong>Discipline</strong> ·
@@ -167,11 +173,13 @@
 
   <!-- Head Teacher Message -->
   <section style="background:var(--silver);padding:80px 40px;">
-    <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Leadership</div>
-      <h2 class="sec-title">A Message from the Head Teacher</h2>
-      <div
+    <div class="sec-inner" style="padding-top:0;padding-bottom:0;">
+      <div class="reveal">
+        <div class="divider"></div>
+        <div class="sec-label">Leadership</div>
+        <h2 class="sec-title">A Message from the Head Teacher</h2>
+      </div>
+      <div class="reveal"
         style="background:var(--white);border-radius:20px;padding:48px;display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;box-shadow:0 4px 24px rgba(10,35,81,0.08);">
         <div style="text-align:center;">
           <div
@@ -185,7 +193,7 @@
         </div>
         <div>
           <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:18px;">Dear
-            Parents, Students & Community,</h3>
+            Parents, Students &amp; Community,</h3>
           <p style="color:var(--muted);line-height:1.8;margin-bottom:16px;">Welcome to Standard Hill School — a place
             where every child's potential is recognized and nurtured. Our school stands firmly on the belief that
             excellence is not an accident but a habit forged through daily commitment, discipline, and the right
@@ -202,12 +210,9 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <div class="ug-banner" style="margin-bottom:40px;">
-      <span class="b1"></span><span class="b2"></span><span class="b3"></span>
-      <span class="b4"></span><span class="b5"></span><span class="b6"></span>
-    </div>
+    <div class="ug-banner"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span
+        class="b4"></span><span class="b5"></span><span class="b6"></span></div>
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Standard Hill School</h3>
@@ -240,7 +245,7 @@
         <ul>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="contact.html">Admissions</a></li>
-          <li><a href="news.html">News & Events</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="#">Download Forms</a></li>
         </ul>
@@ -249,20 +254,17 @@
     <div class="footer-bottom">
       <span>© 2025 Standard Hill School, Kalungu District, Uganda. All Rights Reserved.</span>
       <div class="socials">
-        <a href="#" class="social-btn" aria-label="Standard Hill School on Facebook" title="Facebook" target="_blank"
-          rel="noopener">f</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on WhatsApp" title="WhatsApp" target="_blank"
-          rel="noopener">W</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on X (Twitter)" title="X / Twitter"
-          target="_blank" rel="noopener">𝕏</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on LinkedIn" title="LinkedIn" target="_blank"
-          rel="noopener">in</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on YouTube" title="YouTube" target="_blank"
-          rel="noopener">▶</a>
+        <a href="#" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="#" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">W</a>
+        <a href="#" class="social-btn" aria-label="X / Twitter" title="X / Twitter" target="_blank"
+          rel="noopener">𝕏</a>
+        <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="#" class="social-btn" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶</a>
       </div>
     </div>
   </footer>
 
+  <div class="scroll-top" id="scrollTop" role="button" aria-label="Scroll to top" tabindex="0">↑</div>
   <script src="js/main.js"></script>
 </body>
 
