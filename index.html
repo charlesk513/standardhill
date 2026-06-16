@@ -1,46 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Standard Hill School – Our Utmost is Excellence | Kalungu, Uganda</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Standard Hill School is a distinguished secondary school in Kalungu District, Uganda, offering O-Level and A-Level education in both Arts and Sciences. Our motto: Our Utmost is Excellence." />
-  <meta name="keywords"
-    content="Standard Hill School, Kalungu secondary school, Uganda secondary school, O-Level Uganda, A-Level Uganda, UCE, UACE, Kalungu District school, best schools Uganda" />
+  <meta name="description" content="Standard Hill School is a distinguished secondary school in Kalungu District, Uganda, offering O-Level and A-Level education in both Arts and Sciences. Our motto: Our Utmost is Excellence." />
+  <meta name="keywords" content="Standard Hill School, Kalungu secondary school, Uganda secondary school, O-Level Uganda, A-Level Uganda, UCE, UACE, Kalungu District school, best schools Uganda" />
   <meta name="author" content="Standard Hill School" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.standardhillschool.ac.ug/index.html" />
-
-  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.standardhillschool.ac.ug/" />
   <meta property="og:title" content="Standard Hill School – Our Utmost is Excellence" />
-  <meta property="og:description"
-    content="Distinguished secondary school in Kalungu District, Uganda. O-Level & A-Level education in Arts and Sciences." />
+  <meta property="og:description" content="Distinguished secondary school in Kalungu District, Uganda. O-Level & A-Level education in Arts and Sciences." />
   <meta property="og:image" content="https://www.standardhillschool.ac.ug/images/og-image.jpg" />
   <meta property="og:locale" content="en_UG" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Standard Hill School – Our Utmost is Excellence" />
-  <meta name="twitter:description"
-    content="Distinguished secondary school in Kalungu District, Uganda. O-Level & A-Level in Arts & Sciences." />
-
-  <!-- Geo & Language -->
+  <meta name="twitter:description" content="Distinguished secondary school in Kalungu District, Uganda. O-Level & A-Level in Arts & Sciences." />
   <meta name="geo.region" content="UG-C" />
   <meta name="geo.placename" content="Kalungu District, Uganda" />
   <meta name="language" content="English" />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
   <!-- Uganda Flag Banner -->
@@ -63,8 +48,7 @@
   <header>
     <div class="header-inner">
       <div class="logo-area">
-        <div><img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
-        </div>
+        <img src="img/sths-budge.png" alt="Standard Hill School Badge Logo" class="logo" width="100" height="100">
         <div class="logo-text">
           <h1>Standard Hill School</h1>
           <p>Our Utmost is Excellence</p>
@@ -80,70 +64,83 @@
         <a href="gallery.html">Gallery</a>
         <a href="contact.html" class="nav-cta">Admissions</a>
       </nav>
+      <div class="hamburger" id="hamburger" role="button" aria-label="Open menu" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
 
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="close-btn" id="closeNav" role="button" aria-label="Close menu" tabindex="0">✕</div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="academics.html">Academics</a>
+    <a href="staff.html">Staff</a>
+    <a href="student-life.html">Student Life</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html" style="color:var(--gold-light);">Admissions →</a>
+  </div>
+
   <!-- Hero -->
-  <section class="hero" style="padding:0;">
+  <section class="hero">
+    <div class="hero-particles">
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+      <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    </div>
     <div class="hero-grid">
       <div>
         <div class="hero-badge">🎓 Est. Kalungu District · Uganda</div>
         <h2>Shaping <em>Exceptional</em> Minds for Tomorrow</h2>
-        <p class="hero-sub">Standard Hill School is a distinguished secondary school offering both Arts and Sciences,
-          committed to holistic education, academic excellence, and character development within a nurturing
-          environment.</p>
+        <p class="hero-sub">Standard Hill School is a distinguished secondary school offering both Arts and Sciences, committed to holistic education, academic excellence, and character development within a nurturing environment.</p>
         <div class="hero-btns">
           <a href="contact.html" class="btn-primary">Apply for Admission</a>
           <a href="about.html" class="btn-outline">Discover Our Story →</a>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-img-placeholder" style="border:none;background:transparent;padding:0;">
-          <img src="img/assembly.jpeg" alt="Standard Hill School Assembly"
-            style="width:100%;height:300px;object-fit:cover;border-radius:16px;border:3px solid rgba(212,160,23,0.3);">
+        <div class="hero-img-wrap">
+          <img src="img/assembly.jpeg" alt="Standard Hill School Assembly" loading="eager">
+          <div class="hero-img-overlay">🏫 Morning Assembly — Standard Hill School, Kalungu</div>
         </div>
         <div class="hero-stats">
           <div class="stat-card">
-            <div class="num">500+</div>
+            <div class="num" data-count="500">0</div>
             <div class="lbl">Students</div>
           </div>
           <div class="stat-card">
-            <div class="num">40+</div>
+            <div class="num" data-count="40">0</div>
             <div class="lbl">Staff</div>
           </div>
           <div class="stat-card">
-            <div class="num">100%</div>
-            <div class="lbl">Dedication</div>
+            <div class="num" data-count="100">0</div>
+            <div class="lbl">% Dedication</div>
           </div>
         </div>
       </div>
     </div>
-    <div class="hero-flag">
-      <span class="hf1"></span><span class="hf2"></span><span class="hf3"></span>
-      <span class="hf4"></span><span class="hf5"></span><span class="hf6"></span>
-    </div>
   </section>
 
-  <!-- Mission / Vision / Values Quick Cards -->
-  <section style="background:var(--white); padding:70px 40px 80px;">
+  <!-- Mission / Vision / Values -->
+  <section class="mvv-section">
     <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Our Foundation</div>
-      <h2 class="sec-title">Driven by Purpose, Guided by Values</h2>
-      <div class="mvv-grid fade-up">
-        <div class="mvv-card vision">
+      <div class="reveal">
+        <div class="sec-label">Our Foundation</div>
+        <h2 class="sec-title">Driven by Purpose, Guided by Values</h2>
+      </div>
+      <div class="mvv-grid">
+        <div class="mvv-card vision reveal reveal-delay-1">
           <div class="mvv-icon">🌟</div>
           <h3>Our Vision</h3>
-          <p>To be a leading centre of academic excellence in Uganda, producing well-rounded, globally competitive
-            graduates who are agents of positive transformation in society.</p>
+          <p>To be a leading centre of academic excellence in Uganda, producing well-rounded, globally competitive graduates who are agents of positive transformation in society.</p>
         </div>
-        <div class="mvv-card mission">
+        <div class="mvv-card mission reveal reveal-delay-2">
           <div class="mvv-icon">🎯</div>
           <h3>Our Mission</h3>
-          <p>To provide quality, holistic education in a conducive learning environment that nurtures intellectual
-            curiosity, moral integrity, creativity, and a lifelong love for learning.</p>
+          <p>To provide quality, holistic education in a conducive learning environment that nurtures intellectual curiosity, moral integrity, creativity, and a lifelong love for learning.</p>
         </div>
-        <div class="mvv-card values">
+        <div class="mvv-card values reveal reveal-delay-3">
           <div class="mvv-icon">⚖️</div>
           <h3>Core Values</h3>
           <p>Excellence · Integrity · Discipline · Respect · Innovation · Teamwork · Service to Community</p>
@@ -153,81 +150,96 @@
   </section>
 
   <!-- Why Choose Us -->
-  <section style="background:var(--silver); padding:80px 40px;">
+  <section class="why-section">
     <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Why Standard Hill</div>
-      <h2 class="sec-title">A School That Sets Standards</h2>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
-        <div
-          style="background:var(--white);border-radius:14px;padding:28px;text-align:center;border-top:4px solid var(--navy);">
-          <div style="font-size:2rem;margin-bottom:12px;">📚</div>
-          <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:8px;">Arts & Sciences</h4>
-          <p style="font-size:0.83rem;color:var(--muted);line-height:1.6;">Comprehensive curricula in both Arts and
-            Sciences with experienced subject specialists.</p>
+      <div class="reveal">
+        <div class="sec-label">Why Standard Hill</div>
+        <h2 class="sec-title">A School That Sets Standards</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal reveal-delay-1">
+          <span class="feature-icon">📚</span>
+          <h4>Arts &amp; Sciences</h4>
+          <p>Comprehensive curricula in both Arts and Sciences with experienced subject specialists guiding every student.</p>
         </div>
-        <div
-          style="background:var(--white);border-radius:14px;padding:28px;text-align:center;border-top:4px solid var(--blue);">
-          <div style="font-size:2rem;margin-bottom:12px;">🏆</div>
-          <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:8px;">Proven Results</h4>
-          <p style="font-size:0.83rem;color:var(--muted);line-height:1.6;">Consistent outstanding performance at both
-            UCE and UACE national examinations.</p>
+        <div class="feature-card reveal reveal-delay-2">
+          <span class="feature-icon">🏆</span>
+          <h4>Proven Results</h4>
+          <p>Consistent outstanding performance at both UCE and UACE national examinations year after year.</p>
         </div>
-        <div
-          style="background:var(--white);border-radius:14px;padding:28px;text-align:center;border-top:4px solid var(--gold);">
-          <div style="font-size:2rem;margin-bottom:12px;">🏅</div>
-          <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:8px;">Co-curriculars</h4>
-          <p style="font-size:0.83rem;color:var(--muted);line-height:1.6;">Vibrant sports, arts, debate, and clubs that
-            develop every dimension of a student.</p>
+        <div class="feature-card reveal reveal-delay-3">
+          <span class="feature-icon">🏅</span>
+          <h4>Co-curriculars</h4>
+          <p>Vibrant sports, arts, debate, and clubs that develop every dimension of a student's potential.</p>
         </div>
-        <div
-          style="background:var(--white);border-radius:14px;padding:28px;text-align:center;border-top:4px solid #10b981;">
-          <div style="font-size:2rem;margin-bottom:12px;">🌱</div>
-          <h4 style="font-family:'Playfair Display',serif;color:var(--navy);margin-bottom:8px;">Holistic Growth</h4>
-          <p style="font-size:0.83rem;color:var(--muted);line-height:1.6;">We shape character, confidence, and
-            leadership alongside academic achievement.</p>
+        <div class="feature-card reveal reveal-delay-4">
+          <span class="feature-icon">🌱</span>
+          <h4>Holistic Growth</h4>
+          <p>We shape character, confidence, and leadership alongside impressive academic achievement.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- News Peek -->
-  <section class="news-section" style="background:var(--white);">
+  <!-- Counter Strip -->
+  <section class="counter-section">
+    <div class="sec-inner" style="padding:60px 24px;">
+      <div class="counter-grid">
+        <div class="counter-item reveal reveal-delay-1">
+          <span class="counter-number" data-target="500">0</span>
+          <span class="counter-label">Students Enrolled</span>
+        </div>
+        <div class="counter-item reveal reveal-delay-2">
+          <span class="counter-number" data-target="40">0</span>
+          <span class="counter-label">Dedicated Staff</span>
+        </div>
+        <div class="counter-item reveal reveal-delay-3">
+          <span class="counter-number" data-target="15">0</span>
+          <span class="counter-label">Years of Excellence</span>
+        </div>
+        <div class="counter-item reveal reveal-delay-4">
+          <span class="counter-number" data-target="98">0</span>
+          <span class="counter-label">% Pass Rate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="news-section">
     <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Latest Updates</div>
-      <h2 class="sec-title">News & Announcements</h2>
-      <div class="news-grid fade-up">
-        <div class="news-card">
-          <div class="news-img-ph"><img src="img/sciencelab.img" alt="Term Two Opening Schedule"
-              style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:0;">
+        <div>
+          <div class="sec-label">Latest Updates</div>
+          <h2 class="sec-title" style="margin-bottom:0;">News &amp; Announcements</h2>
+        </div>
+        <a href="news.html" class="read-more" style="color:var(--gold);font-size:0.88rem;margin-bottom:48px;">View All News →</a>
+      </div>
+      <div class="news-grid" style="margin-top:48px;">
+        <div class="news-card reveal reveal-delay-1">
+          <div class="news-img-ph"><img src="img/trophies.jpg" alt="Term Two Opening" onerror="this.parentElement.innerHTML='<div class=news-img-placeholder>📰</div>'"></div>
           <div class="news-body">
             <div class="news-date">May 2025</div>
             <h4>Term Two Opening Schedule Announced</h4>
-            <p>Students are expected to report on the dates indicated in the school calendar. Please note required items
-              for boarding students.</p>
+            <p>Students are expected to report on the dates indicated in the school calendar. Please note required items for boarding students.</p>
             <a href="news.html" class="read-more">Read More →</a>
           </div>
         </div>
-        <div class="news-card">
-          <div class="news-img-ph"><img src="img/volleyball.img" alt="Outstanding UCE Results 2024"
-              style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="news-card reveal reveal-delay-2">
+          <div class="news-img-ph"><img src="img/assembly.jpeg" alt="UCE Results 2024" onerror="this.parentElement.innerHTML='<div class=news-img-placeholder>🏆</div>'"></div>
           <div class="news-body">
             <div class="news-date">April 2025</div>
             <h4>Outstanding UCE Results for Class of 2024</h4>
-            <p>Standard Hill School celebrates remarkable performance at the Uganda Certificate of Education
-              examinations with top distinctions.</p>
+            <p>Standard Hill School celebrates remarkable performance at the Uganda Certificate of Education examinations with top distinctions.</p>
             <a href="news.html" class="read-more">Read More →</a>
           </div>
         </div>
-        <div class="news-card">
-          <div class="news-img-ph"><img src="img/trophies.jpg" alt="Inter-School Sports Competition 2025"
-              style="width:100%;height:100%;object-fit:cover;"></div>
+        <div class="news-card reveal reveal-delay-3">
+          <div class="news-img-ph"><img src="img/football.jpeg" alt="Inter-School Sports 2025" onerror="this.parentElement.innerHTML='<div class=news-img-placeholder>⚽</div>'"></div>
           <div class="news-body">
             <div class="news-date">March 2025</div>
             <h4>Inter-School Sports Competition 2025</h4>
-            <p>Our students participated with distinction in the Kalungu District inter-school games. Congratulations to
-              all athletes!</p>
+            <p>Our students participated with distinction in the Kalungu District inter-school games. Congratulations to all athletes!</p>
             <a href="news.html" class="read-more">Read More →</a>
           </div>
         </div>
@@ -236,39 +248,37 @@
   </section>
 
   <!-- Testimonials -->
-  <section class="testimonials-section">
+  <section class="testi-section">
     <div class="sec-inner">
-      <div class="divider"></div>
-      <div class="sec-label">Voices</div>
-      <h2 class="sec-title">What Our Community Says</h2>
-      <div class="testimonials-grid fade-up">
-        <div class="testi-card">
-          <p class="testi-text">Standard Hill gave my child not just education but a life philosophy — excellence in
-            everything. The teachers are dedicated and the environment is truly nurturing.</p>
+      <div class="reveal">
+        <div class="sec-label">Voices</div>
+        <h2 class="sec-title">What Our Community Says</h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal reveal-delay-1">
+          <p class="testi-text">Standard Hill gave my child not just education but a life philosophy — excellence in everything. The teachers are dedicated and the environment is truly nurturing.</p>
           <div class="testi-author">
-            <div class="testi-avatar">A</div>
+            <div class="testi-avatar">K</div>
             <div>
               <h5>Mr. Kaggwa Fred</h5>
               <p>Parent of S.4 Student</p>
             </div>
           </div>
         </div>
-        <div class="testi-card">
-          <p class="testi-text">I joined this school not knowing what to expect, but left as a confident young person
-            ready for university. The motto is not just words — they live it every day.</p>
+        <div class="testi-card reveal reveal-delay-2">
+          <p class="testi-text">I joined this school not knowing what to expect, but left as a confident young person ready for university. The motto is not just words — they live it every day.</p>
           <div class="testi-author">
-            <div class="testi-avatar">B</div>
+            <div class="testi-avatar">C</div>
             <div>
               <h5>Kabunga Charles</h5>
-              <p>Class of 2022 and 2024 | Mbarara University of Science and Technology</p>
+              <p>Class of 2024 | Mbarara University of Science and Technology</p>
             </div>
           </div>
         </div>
-        <div class="testi-card">
-          <p class="testi-text">The discipline and academic rigour here is unmatched in the district. My daughter has
-            grown so much — academically and personally. I highly recommend Standard Hill.</p>
+        <div class="testi-card reveal reveal-delay-3">
+          <p class="testi-text">The discipline and academic rigour here is unmatched in the district. My daughter has grown so much — academically and personally. I highly recommend Standard Hill.</p>
           <div class="testi-author">
-            <div class="testi-avatar">C</div>
+            <div class="testi-avatar">N</div>
             <div>
               <h5>Namutebi Teddy</h5>
               <p>Parent of S.6 Student</p>
@@ -279,9 +289,20 @@
     </div>
   </section>
 
+  <!-- CTA Strip -->
+  <section class="cta-section">
+    <div class="cta-inner reveal">
+      <div>
+        <h2>Ready to Join Standard Hill?</h2>
+        <p>Begin your journey toward excellence. Admissions are open for O-Level and A-Level.</p>
+      </div>
+      <a href="contact.html" class="btn-cta">Apply for Admission</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    <div class="ug-banner" style="margin-bottom:40px;">
+    <div class="ug-banner" style="margin-bottom:0;">
       <span class="b1"></span><span class="b2"></span><span class="b3"></span>
       <span class="b4"></span><span class="b5"></span><span class="b6"></span>
     </div>
@@ -289,8 +310,7 @@
       <div class="footer-brand">
         <h3>Standard Hill School</h3>
         <div class="motto">"Our Utmost is Excellence"</div>
-        <p>A distinguished secondary school in Kalungu District, Uganda, offering both Arts and Sciences at O-Level and
-          A-Level, committed to holistic excellence.</p>
+        <p>A distinguished secondary school in Kalungu District, Uganda, offering both Arts and Sciences at O-Level and A-Level, committed to holistic excellence.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -317,30 +337,25 @@
         <ul>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="contact.html">Admissions</a></li>
-          <li><a href="news.html">News & Events</a></li>
+          <li><a href="news.html">News &amp; Events</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="#">Download Forms</a></li>
+          <li><a href="tel:+256700482629">📞 +256 700 482629</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2025 Standard Hill School, Kalungu District, Uganda. All Rights Reserved.</span>
       <div class="socials">
-        <a href="#" class="social-btn" aria-label="Standard Hill School on Facebook" title="Facebook" target="_blank"
-          rel="noopener">f</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on WhatsApp" title="WhatsApp" target="_blank"
-          rel="noopener">W</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on X (Twitter)" title="X / Twitter"
-          target="_blank" rel="noopener">𝕏</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on LinkedIn" title="LinkedIn" target="_blank"
-          rel="noopener">in</a>
-        <a href="#" class="social-btn" aria-label="Standard Hill School on YouTube" title="YouTube" target="_blank"
-          rel="noopener">▶</a>
+        <a href="#" class="social-btn" aria-label="Standard Hill School on Facebook" title="Facebook" target="_blank" rel="noopener">f</a>
+        <a href="#" class="social-btn" aria-label="Standard Hill School on WhatsApp" title="WhatsApp" target="_blank" rel="noopener">W</a>
+        <a href="#" class="social-btn" aria-label="Standard Hill School on X (Twitter)" title="X / Twitter" target="_blank" rel="noopener">𝕏</a>
+        <a href="#" class="social-btn" aria-label="Standard Hill School on LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="#" class="social-btn" aria-label="Standard Hill School on YouTube" title="YouTube" target="_blank" rel="noopener">▶</a>
       </div>
     </div>
   </footer>
 
+  <div class="scroll-top" id="scrollTop" role="button" aria-label="Scroll to top" tabindex="0">↑</div>
   <script src="js/main.js"></script>
 </body>
-
 </html>
