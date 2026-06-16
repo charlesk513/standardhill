@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery – Standard Hill School | Kalungu District, Uganda</title>
-  <meta name="description" content="Photo gallery of Standard Hill School – student activities, sports, events, facilities and school life in Kalungu District, Uganda." />
-  <meta name="keywords" content="Standard Hill School gallery, Kalungu school photos, Uganda secondary school photos, school life Uganda" />
+  <meta name="description"
+    content="Photo gallery of Standard Hill School – student activities, sports, events, facilities and school life in Kalungu District, Uganda." />
+  <meta name="keywords"
+    content="Standard Hill School gallery, Kalungu school photos, Uganda secondary school photos, school life Uganda" />
   <meta name="author" content="Standard Hill School" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.standardhillschool.ac.ug/gallery.html" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.standardhillschool.ac.ug/gallery.html" />
   <meta property="og:title" content="Gallery – Standard Hill School" />
-  <meta property="og:description" content="Browse photos from Standard Hill School – student life, sports, events and facilities in Kalungu, Uganda." />
+  <meta property="og:description"
+    content="Browse photos from Standard Hill School – student life, sports, events and facilities in Kalungu, Uganda." />
   <meta property="og:image" content="https://www.standardhillschool.ac.ug/images/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Gallery – Standard Hill School" />
@@ -22,7 +26,9 @@
   <meta name="language" content="English" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     /* ── Gallery Grid ── */
@@ -31,62 +37,97 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 12px;
     }
+
     .gallery-item {
       border-radius: 10px;
       overflow: hidden;
       background: var(--sky);
       position: relative;
       cursor: zoom-in;
-      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
-                  box-shadow 0.35s cubic-bezier(0.4,0,0.2,1),
-                  z-index 0s;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        z-index 0s;
       z-index: 1;
     }
+
     .gallery-item img {
-      width: 100%; height: 200px;
-      object-fit: cover; display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
       transition: transform 0.45s ease;
       pointer-events: none;
     }
-    .gallery-item.tall img { height: 412px; }
-    .gallery-item.wide { grid-column: span 2; }
-    .gallery-item.wide img { height: 200px; width: 100%; }
+
+    .gallery-item.tall img {
+      height: 412px;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 2;
+    }
+
+    .gallery-item.wide img {
+      height: 200px;
+      width: 100%;
+    }
 
     /* Hover expand effect */
     .gallery-item:hover {
       transform: scale(1.08);
       z-index: 10;
-      box-shadow: 0 24px 80px rgba(10,26,58,0.45), 0 0 0 3px var(--gold);
+      box-shadow: 0 24px 80px rgba(10, 26, 58, 0.45), 0 0 0 3px var(--gold);
     }
-    .gallery-item:hover img { transform: scale(1.04); }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
 
     /* Caption overlay */
     .gallery-item .overlay {
-      position: absolute; inset: 0;
-      background: rgba(10,26,58,0);
-      display: flex; align-items: flex-end;
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 26, 58, 0);
+      display: flex;
+      align-items: flex-end;
       padding: 16px;
       transition: background 0.3s ease;
     }
-    .gallery-item:hover .overlay { background: rgba(10,26,58,0.5); }
+
+    .gallery-item:hover .overlay {
+      background: rgba(10, 26, 58, 0.5);
+    }
+
     .gallery-item .caption {
-      color: var(--white); font-size: 0.82rem; font-weight: 600;
-      opacity: 0; transform: translateY(10px);
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 600;
+      opacity: 0;
+      transform: translateY(10px);
       transition: opacity 0.3s ease, transform 0.3s ease;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
-      display: flex; align-items: center; gap: 8px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
+
     .gallery-item .caption::before {
-      content: '🔍'; font-size: 0.9rem;
+      content: '🔍';
+      font-size: 0.9rem;
     }
-    .gallery-item:hover .caption { opacity: 1; transform: translateY(0); }
+
+    .gallery-item:hover .caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
     /* ── Lightbox ── */
     .lightbox {
       display: none;
-      position: fixed; inset: 0;
+      position: fixed;
+      inset: 0;
       z-index: 9999;
-      background: rgba(5,12,30,0.92);
+      background: rgba(5, 12, 30, 0.92);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       align-items: center;
@@ -94,91 +135,185 @@
       padding: 24px;
       cursor: zoom-out;
     }
-    .lightbox.open { display: flex; animation: lbFadeIn 0.3s ease both; }
-    @keyframes lbFadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
+
+    .lightbox.open {
+      display: flex;
+      animation: lbFadeIn 0.3s ease both;
     }
+
+    @keyframes lbFadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
     .lightbox-inner {
       position: relative;
       max-width: 88vw;
       max-height: 88vh;
       cursor: default;
-      animation: lbZoomIn 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+      animation: lbZoomIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
     }
+
     @keyframes lbZoomIn {
-      from { transform: scale(0.7); opacity: 0; }
-      to   { transform: scale(1);   opacity: 1; }
+      from {
+        transform: scale(0.7);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
+
     .lightbox-inner img {
       display: block;
       max-width: 88vw;
       max-height: 80vh;
-      width: auto; height: auto;
+      width: auto;
+      height: auto;
       border-radius: 14px;
-      box-shadow: 0 32px 100px rgba(0,0,0,0.7);
+      box-shadow: 0 32px 100px rgba(0, 0, 0, 0.7);
       object-fit: contain;
     }
+
     .lightbox-caption {
       text-align: center;
-      color: rgba(255,255,255,0.85);
-      font-size: 0.9rem; font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.9rem;
+      font-weight: 500;
       margin-top: 14px;
       font-family: 'Playfair Display', serif;
       letter-spacing: 0.03em;
     }
+
     .lightbox-close {
-      position: fixed; top: 20px; right: 24px;
-      width: 48px; height: 48px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.2);
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      color: white; font-size: 1.4rem;
-      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       transition: background 0.2s, transform 0.2s;
       z-index: 10000;
     }
-    .lightbox-close:hover { background: rgba(200,146,10,0.7); transform: rotate(90deg); }
-    .lightbox-prev, .lightbox-next {
-      position: fixed; top: 50%; transform: translateY(-50%);
-      width: 52px; height: 52px;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+
+    .lightbox-close:hover {
+      background: rgba(200, 146, 10, 0.7);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 50%;
-      color: white; font-size: 1.4rem;
-      display: flex; align-items: center; justify-content: center;
+      color: white;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       transition: background 0.2s, transform 0.2s;
       z-index: 10000;
       user-select: none;
     }
-    .lightbox-prev { left: 16px; }
-    .lightbox-next { right: 16px; }
-    .lightbox-prev:hover { background: rgba(200,146,10,0.7); transform: translateY(-50%) scale(1.1); }
-    .lightbox-next:hover { background: rgba(200,146,10,0.7); transform: translateY(-50%) scale(1.1); }
+
+    .lightbox-prev {
+      left: 16px;
+    }
+
+    .lightbox-next {
+      right: 16px;
+    }
+
+    .lightbox-prev:hover {
+      background: rgba(200, 146, 10, 0.7);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-next:hover {
+      background: rgba(200, 146, 10, 0.7);
+      transform: translateY(-50%) scale(1.1);
+    }
+
     .lightbox-counter {
-      position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,0.5); font-size: 0.8rem;
-      background: rgba(0,0,0,0.4); padding: 4px 16px; border-radius: 20px;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px 16px;
+      border-radius: 20px;
     }
 
     @media (max-width: 768px) {
-      .gallery-grid { grid-template-columns: 1fr 1fr; }
-      .gallery-item.tall img { height: 250px; }
-      .gallery-item.wide { grid-column: span 1; }
-      .gallery-item:hover { transform: scale(1.04); }
-      .lightbox-prev { left: 6px; }
-      .lightbox-next { right: 6px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-item.tall img {
+        height: 250px;
+      }
+
+      .gallery-item.wide {
+        grid-column: span 1;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.04);
+      }
+
+      .lightbox-prev {
+        left: 6px;
+      }
+
+      .lightbox-next {
+        right: 6px;
+      }
     }
+
     @media (max-width: 480px) {
-      .gallery-grid { grid-template-columns: 1fr; }
-      .gallery-item.tall { grid-row: span 1; }
-      .gallery-item img, .gallery-item.tall img { height: 220px; }
-      .gallery-item:hover { transform: scale(1.02); }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item.tall {
+        grid-row: span 1;
+      }
+
+      .gallery-item img,
+      .gallery-item.tall img {
+        height: 220px;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.02);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <div class="ug-banner">
@@ -208,7 +343,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="academics.html">Academics</a>
-        <a href="staff.html">Staff</a>
+
         <a href="student-life.html">Student Life</a>
         <a href="news.html">News</a>
         <a href="gallery.html" class="active">Gallery</a>
@@ -225,7 +360,7 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="academics.html">Academics</a>
-    <a href="staff.html">Staff</a>
+
     <a href="student-life.html">Student Life</a>
     <a href="news.html">News</a>
     <a href="gallery.html">Gallery</a>
@@ -239,73 +374,101 @@
         <div class="divider"></div>
         <div class="sec-label">Gallery</div>
         <h2 class="sec-title">Life in Pictures</h2>
-        <p class="sec-lead">A glimpse into the vibrant life at Standard Hill School — from academics to sports, events and everyday moments that make our community special.</p>
+        <p class="sec-lead">A glimpse into the vibrant life at Standard Hill School — from academics to sports, events
+          and everyday moments that make our community special.</p>
       </div>
 
       <div class="gallery-grid reveal">
         <div class="gallery-item tall">
           <img src="img/school-building.jpg" alt="Standard Hill School Building" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">School Building</div></div>
+          <div class="overlay">
+            <div class="caption">School Building</div>
+          </div>
         </div>
         <div class="gallery-item wide">
           <img src="img/assembly.jpeg" alt="Morning Assembly" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Morning Assembly</div></div>
+          <div class="overlay">
+            <div class="caption">Morning Assembly</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/football.jpeg" alt="Football Team" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Football</div></div>
+          <div class="overlay">
+            <div class="caption">Football</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/trophies.jpg" alt="School Trophies" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Our Trophies</div></div>
+          <div class="overlay">
+            <div class="caption">Our Trophies</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/enjoying.jpg" alt="Students Enjoying" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Student Life</div></div>
+          <div class="overlay">
+            <div class="caption">Student Life</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/tour.jpg" alt="Field Trip" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Environmental Fieldwork</div></div>
+          <div class="overlay">
+            <div class="caption">Environmental Fieldwork</div>
+          </div>
         </div>
         <div class="gallery-item wide">
           <img src="img/teaching.jpg" alt="Classroom Teaching" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">In the Classroom</div></div>
+          <div class="overlay">
+            <div class="caption">In the Classroom</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/mr-hassan.jpeg" alt="Head Teacher" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Leadership</div></div>
+          <div class="overlay">
+            <div class="caption">Leadership</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/mr_umar.jpg" alt="Teaching Staff" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Our Staff</div></div>
+          <div class="overlay">
+            <div class="caption">Our Staff</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/calendar.jpeg" alt="School Events" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">School Events</div></div>
+          <div class="overlay">
+            <div class="caption">School Events</div>
+          </div>
         </div>
         <div class="gallery-item">
           <img src="img/mr-denis.jpeg" alt="School Administration" onerror="this.style.display='none'">
-          <div class="overlay"><div class="caption">Administration</div></div>
+          <div class="overlay">
+            <div class="caption">Administration</div>
+          </div>
         </div>
       </div>
 
       <!-- CTA -->
-      <div class="reveal" style="text-align:center;margin-top:60px;padding:48px;background:var(--sky);border-radius:20px;">
+      <div class="reveal"
+        style="text-align:center;margin-top:60px;padding:48px;background:var(--sky);border-radius:20px;">
         <div class="sec-label" style="justify-content:center;">Share Your Story</div>
-        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:12px;">Be Part of Our Gallery</h3>
-        <p style="color:var(--muted);font-size:0.9rem;max-width:480px;margin:0 auto 28px;">Are you a student, parent, or alumnus with photos to share? Reach out to us and help grow our school's visual story.</p>
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--navy);margin-bottom:12px;">Be Part
+          of Our Gallery</h3>
+        <p style="color:var(--muted);font-size:0.9rem;max-width:480px;margin:0 auto 28px;">Are you a student, parent, or
+          alumnus with photos to share? Reach out to us and help grow our school's visual story.</p>
         <a href="contact.html" class="btn-cta" style="display:inline-block;">Contact Us →</a>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="ug-banner"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span><span class="b5"></span><span class="b6"></span></div>
+    <div class="ug-banner"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span
+        class="b4"></span><span class="b5"></span><span class="b6"></span></div>
     <div class="footer-grid">
       <div class="footer-brand">
         <h3>Standard Hill School</h3>
         <div class="motto">"Our Utmost is Excellence"</div>
-        <p>A distinguished secondary school in Kalungu District, Uganda, offering both Arts and Sciences at O-Level and A-Level, committed to holistic excellence.</p>
+        <p>A distinguished secondary school in Kalungu District, Uganda, offering both Arts and Sciences at O-Level and
+          A-Level, committed to holistic excellence.</p>
       </div>
       <div class="footer-col">
         <h4>Quick Links</h4>
@@ -343,7 +506,8 @@
       <div class="socials">
         <a href="#" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">f</a>
         <a href="#" class="social-btn" aria-label="WhatsApp" title="WhatsApp" target="_blank" rel="noopener">W</a>
-        <a href="#" class="social-btn" aria-label="X / Twitter" title="X / Twitter" target="_blank" rel="noopener">𝕏</a>
+        <a href="#" class="social-btn" aria-label="X / Twitter" title="X / Twitter" target="_blank"
+          rel="noopener">𝕏</a>
         <a href="#" class="social-btn" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">in</a>
         <a href="#" class="social-btn" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">▶</a>
       </div>
@@ -355,8 +519,8 @@
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
     <div class="lightbox-close" id="lbClose" title="Close (Esc)">✕</div>
-    <div class="lightbox-prev"  id="lbPrev"  title="Previous (←)">&#8592;</div>
-    <div class="lightbox-next"  id="lbNext"  title="Next (→)">&#8594;</div>
+    <div class="lightbox-prev" id="lbPrev" title="Previous (←)">&#8592;</div>
+    <div class="lightbox-next" id="lbNext" title="Next (→)">&#8594;</div>
     <div class="lightbox-inner" id="lbInner">
       <img id="lbImg" src="" alt="">
       <div class="lightbox-caption" id="lbCaption"></div>
@@ -368,19 +532,19 @@
   <script>
     // ── Collect all gallery images ──────────────────────────────────────
     var galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
-    var images = galleryItems.map(function(item) {
-      var img     = item.querySelector('img');
+    var images = galleryItems.map(function (item) {
+      var img = item.querySelector('img');
       var caption = item.querySelector('.caption');
       return {
-        src:     img ? img.src : '',
-        alt:     img ? (img.alt || '') : '',
-        caption: caption ? caption.textContent.replace('🔍','').trim() : ''
+        src: img ? img.src : '',
+        alt: img ? (img.alt || '') : '',
+        caption: caption ? caption.textContent.replace('🔍', '').trim() : ''
       };
     });
 
     var currentIndex = 0;
-    var lightbox  = document.getElementById('lightbox');
-    var lbImg     = document.getElementById('lbImg');
+    var lightbox = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
     var lbCaption = document.getElementById('lbCaption');
     var lbCounter = document.getElementById('lbCounter');
 
@@ -401,7 +565,7 @@
       // Animate image swap
       lbImg.style.opacity = '0';
       lbImg.style.transform = 'scale(0.94)';
-      setTimeout(function() {
+      setTimeout(function () {
         lbImg.src = item.src;
         lbImg.alt = item.alt;
         lbCaption.textContent = item.caption;
@@ -423,34 +587,34 @@
     }
 
     // Attach click to each gallery item
-    galleryItems.forEach(function(item, i) {
-      item.addEventListener('click', function() { openLightbox(i); });
+    galleryItems.forEach(function (item, i) {
+      item.addEventListener('click', function () { openLightbox(i); });
     });
 
     // Controls
     document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    document.getElementById('lbPrev').addEventListener('click', function(e) { e.stopPropagation(); prevImage(); });
-    document.getElementById('lbNext').addEventListener('click', function(e) { e.stopPropagation(); nextImage(); });
+    document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); prevImage(); });
+    document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); nextImage(); });
 
     // Click backdrop to close
-    lightbox.addEventListener('click', function(e) {
+    lightbox.addEventListener('click', function (e) {
       if (e.target === lightbox) closeLightbox();
     });
 
     // Keyboard navigation
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
       if (!lightbox.classList.contains('open')) return;
-      if (e.key === 'Escape')     closeLightbox();
-      if (e.key === 'ArrowLeft')  prevImage();
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevImage();
       if (e.key === 'ArrowRight') nextImage();
     });
 
     // Touch swipe support
     var touchStartX = 0;
-    lightbox.addEventListener('touchstart', function(e) {
+    lightbox.addEventListener('touchstart', function (e) {
       touchStartX = e.touches[0].clientX;
     }, { passive: true });
-    lightbox.addEventListener('touchend', function(e) {
+    lightbox.addEventListener('touchend', function (e) {
       var diff = touchStartX - e.changedTouches[0].clientX;
       if (Math.abs(diff) > 50) {
         if (diff > 0) nextImage(); else prevImage();
@@ -458,4 +622,5 @@
     }, { passive: true });
   </script>
 </body>
+
 </html>
